@@ -97,7 +97,7 @@ export default function CareersPage() {
 
       <div className="mt-16 text-center">
         <p className="text-muted-foreground mb-4">
-          Don't see a position that matches your skills? Send us your CV anyway!
+          Don&apos;t see a position that matches your skills? Send us your CV anyway!
         </p>
         <Button asChild variant="outline">
           <Link href="/contact">Contact Us</Link>

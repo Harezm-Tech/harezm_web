@@ -67,7 +67,7 @@ export default function ContactPage() {
             <CardHeader>
               <CardTitle>Get in Touch</CardTitle>
               <CardDescription>
-                Fill out the form below and we'll get back to you as soon as possible.
+                Fill out the form below and we&apos;ll get back to you as soon as possible.
               </CardDescription>
             </CardHeader>
             <CardContent>

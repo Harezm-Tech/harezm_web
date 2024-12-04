@@ -142,7 +142,7 @@ export default function ServicesPage() {
         <div className="max-w-4xl mx-auto text-center space-y-4 mb-12">
           <h2 className="text-3xl font-bold">Success Stories</h2>
           <p className="text-muted-foreground">
-            See how we've helped businesses transform their operations with our SAP solutions
+            See how we&apos;ve helped businesses transform their operations with our SAP solutions
           </p>
         </div>
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">

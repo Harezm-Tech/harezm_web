@@ -1,3 +1,5 @@
+"use client"
+
 import { Button } from "@/components/ui/button"
 import {
   Card,
@@ -17,7 +19,7 @@ import {
   Calculator,
   BarChart3,
 } from 'lucide-react'
-import { motion } from "framer-motion"
+import { motion } from "@/components/motion"
 
 const container = {
   hidden: { opacity: 0 },

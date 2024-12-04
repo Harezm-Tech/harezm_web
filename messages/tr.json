@@ -1,0 +1,61 @@
+{
+  "navigation": {
+    "home": "Ana Sayfa",
+    "services": "Hizmetler ve Çözümler",
+    "products": "Ürünler",
+    "blog": "Blog",
+    "careers": "Kariyer",
+    "contact": "İletişim"
+  },
+  "home": {
+    "title": "Harezm Teknoloji",
+    "description": "SAP entegrasyonu, yerelleştirme ve özelleştirilmiş yazılım çözümleri alanında lider bir teknoloji firmasıdır.",
+    "mission": "Misyonumuz, müşterilerimize yüksek kaliteli, güvenilir ve yenilikçi çözümler sunarak işlerini dijitalleştirmelerine destek olmaktır."
+  },
+  "services": {
+    "sap_consultancy": {
+      "title": "SAP Danışmanlığı",
+      "items": [
+        "SAP Public Cloud Danışmanlığı",
+        "SAP Private Cloud Danışmanlığı",
+        "SAP FICO, SAP AA (Sabit Kıymet Muhasebesi)",
+        "SAP RE-FX (Esnek Gayrimenkul Yönetimi)"
+      ]
+    },
+    "sap_localization": {
+      "title": "SAP Yerelleştirme",
+      "items": [
+        "Enflasyon Muhasebesi",
+        "KDV Beyanı"
+      ]
+    },
+    "bank_integration": {
+      "title": "Banka Entegrasyonları",
+      "items": [
+        "Doğrudan Borçlandırma Sistemi (DBS)",
+        "Banka e-Hesap Ekstresi",
+        "Banka e-Ödeme"
+      ]
+    }
+  },
+  "products": {
+    "title": "Ürünler",
+    "items": [
+      "Enflasyon Muhasebesi Çözüm Paketi",
+      "SAP KDV Beyanı Paketi",
+      "SAP IFRS Paketi",
+      "SAP Entegrasyon Araçları",
+      "Özelleştirilmiş Yazılım Çözümleri"
+    ]
+  },
+  "careers": {
+    "title": "Kariyer",
+    "description": "Açık Pozisyonlar",
+    "cta": "Hemen başvurun ve dijital çözümler dünyasına katılın!"
+  },
+  "contact": {
+    "title": "İletişim",
+    "form_title": "Bizimle iletişime geçin",
+    "email": "E-posta: info@harezm.com"
+  }
+}

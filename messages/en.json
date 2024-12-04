@@ -1,0 +1,61 @@
+{
+  "navigation": {
+    "home": "Home",
+    "services": "Services & Solutions",
+    "products": "Products",
+    "blog": "Blog",
+    "careers": "Careers",
+    "contact": "Contact"
+  },
+  "home": {
+    "title": "Harezm Technology",
+    "description": "A leading tech firm specializing in SAP integration, localization, and custom software solutions.",
+    "mission": "Our mission is to provide high-quality, reliable, and innovative solutions to help our clients digitize their businesses."
+  },
+  "services": {
+    "sap_consultancy": {
+      "title": "SAP Consultancy",
+      "items": [
+        "SAP Public Cloud Consultancy",
+        "SAP Private Cloud Consultancy",
+        "SAP FICO, SAP AA (Asset Accounting)",
+        "SAP RE-FX (Flexible Real Estate Management)"
+      ]
+    },
+    "sap_localization": {
+      "title": "SAP Localization",
+      "items": [
+        "Inflation Accounting",
+        "VAT Return"
+      ]
+    },
+    "bank_integration": {
+      "title": "Bank Integrations",
+      "items": [
+        "Direct Debit System (DBS)",
+        "Bank e-Account Statement",
+        "Bank e-Payment"
+      ]
+    }
+  },
+  "products": {
+    "title": "Products",
+    "items": [
+      "Inflation Accounting Solution Package",
+      "SAP VAT Return Package",
+      "SAP IFRS Package",
+      "SAP Integration Tools",
+      "Custom Software Solutions"
+    ]
+  },
+  "careers": {
+    "title": "Careers",
+    "description": "Open Positions",
+    "cta": "Apply now and join the world of digital solutions!"
+  },
+  "contact": {
+    "title": "Contact",
+    "form_title": "Get in touch with us",
+    "email": "Email: info@harezm.com"
+  }
+}

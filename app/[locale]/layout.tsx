@@ -39,10 +39,6 @@ type Props = {
   };
 }
 
-function isValidLocale(locale: string): locale is 'en' | 'tr' {
-  return locales.includes(locale as any)
-}
-
 export async function generateStaticParams() {
   return locales.map((locale) => ({ locale }))
 }
@@ -81,12 +77,4 @@ export default async function LocaleLayout({
       </body>
     </html>
   )
-}
-
-async function getMessages(locale: string) {
-  try {
-    return (await import(`../../messages/${locale}.json`)).default
-  } catch (error) {
-    notFound()
-  }
 }

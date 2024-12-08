@@ -55,7 +55,7 @@ export default async function LocaleLayout({
   // Enable static rendering
   unstable_setRequestLocale(locale)
 
-  const messages = await getMessages(locale)
+  const messages = await import(`../../messages/${locale}.json`).then(module => module.default)
 
   return (
     <html lang={locale} suppressHydrationWarning>

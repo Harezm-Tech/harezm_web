@@ -1,36 +1,122 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Harezm.com - Modern Web Development Solutions
 
-## Getting Started
+<div align="center">
+  <img src="public/logo.png" alt="Harezm Logo" width="200"/>
+  <h3>Building the Future of Web Development</h3>
+  
+  [![Next.js](https://img.shields.io/badge/Next.js-15.0-black?style=flat&logo=next.js)](https://nextjs.org/)
+  [![TypeScript](https://img.shields.io/badge/TypeScript-5.3-blue?style=flat&logo=typescript)](https://www.typescriptlang.org/)
+  [![Tailwind CSS](https://img.shields.io/badge/Tailwind-3.3-38B2AC?style=flat&logo=tailwind-css)](https://tailwindcss.com/)
+  [![Vercel](https://img.shields.io/badge/Vercel-Deployed-000000?style=flat&logo=vercel)](https://harezm.com)
+</div>
 
-First, run the development server:
+## 🚀 About Harezm
+
+Harezm is a cutting-edge technology company specializing in modern web development solutions. We combine innovative technologies with elegant design to create exceptional digital experiences.
+
+### 🌟 Key Features
+
+- **Modern Tech Stack**: Built with Next.js 15, TypeScript, and Tailwind CSS
+- **Responsive Design**: Seamless experience across all devices
+- **Internationalization**: Multi-language support with next-intl
+- **Dark Mode**: Elegant theme switching with next-themes
+- **Accessibility**: WCAG compliant with full keyboard navigation
+- **Performance**: Optimized with Next.js 15's partial prerendering
+
+## 🛠️ Tech Stack
+
+- **Frontend Framework**: Next.js 15
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS + shadcn/ui
+- **State Management**: Zustand
+- **Animations**: Framer Motion
+- **Icons**: Lucide Icons
+- **Deployment**: Vercel
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+- Node.js 20.x or later
+- npm or yarn
+- Git
+
+### Installation
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/Harezm-Tech/harezm_web.git
+   cd harezm_web
+   ```
+
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+
+3. Set up environment variables:
+   ```bash
+   cp .env.example .env.local
+   ```
+
+4. Start the development server:
+   ```bash
+   npm run dev
+   ```
+
+Visit [http://localhost:3000](http://localhost:3000) to see the application.
+
+## 🌍 Internationalization
+
+Harezm supports multiple languages out of the box:
+
+- 🇺🇸 English
+- 🇹🇷 Turkish
+
+To add a new translation:
+1. Add locale file in `/messages`
+2. Update language switcher component
+3. Add locale to i18n configuration
+
+## 🎨 UI Components
+
+We use shadcn/ui for our component library. To add new components:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npx shadcn-ui add [component-name]
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 📱 Features
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- **Modern Design**: Clean and professional user interface
+- **Responsive**: Mobile-first approach
+- **Performance**: Optimized for speed and SEO
+- **Accessibility**: WCAG 2.1 compliant
+- **Dark Mode**: Elegant theme switching
+- **Analytics**: Built-in performance monitoring
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🤝 Contributing
 
-## Learn More
+We welcome contributions! Please see our [Contributing Guidelines](CONTRIBUTING.md) for details.
 
-To learn more about Next.js, take a look at the following resources:
+## 📜 License
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 🔗 Links
 
-## Deploy on Vercel
+- [Website](https://harezm.com)
+- [Documentation](https://docs.harezm.com)
+- [GitHub](https://github.com/Harezm-Tech)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 📞 Contact
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Email: [contact@harezm.com](mailto:contact@harezm.com)
+- Twitter: [@HarezmTech](https://twitter.com/HarezmTech)
+- LinkedIn: [Harezm Technology](https://linkedin.com/company/harezm)
+
+---
+
+<div align="center">
+  Made with ❤️ by Harezm Technology Team
+</div>

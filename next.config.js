@@ -1,8 +1,27 @@
+const createNextIntlPlugin = require('next-intl/plugin');
+
+const withNextIntl = createNextIntlPlugin('./i18n.ts');
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  devIndicators: {
-    buildActivity: false,
+  reactStrictMode: true,
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'images.unsplash.com',
+        port: '',
+        pathname: '/**',
+      },
+    ],
   },
-}
+  experimental: {
+    externalDir: true,
+    serverActions: {
+      bodySizeLimit: '2mb',
+    },
+    typedRoutes: true
+  }
+};
 
-module.exports = nextConfig
+module.exports = withNextIntl(nextConfig);

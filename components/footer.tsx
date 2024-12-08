@@ -1,81 +1,86 @@
-import Link from "next/link"
-import Image from "next/image"
-import { Facebook, Linkedin, Twitter } from 'lucide-react'
+'use client';
+
+import { Link } from '@/src/i18n/routing';
+import { useTranslations } from 'next-intl';
+import { ModeToggle } from "./mode-toggle"
+import { LanguageToggle } from "./language-toggle"
+import { Button } from "@/components/ui/button"
+import { Input } from "@/components/ui/input"
+import { Separator } from "@/components/ui/separator"
+import { Linkedin, Mail } from "lucide-react"
 
 export function Footer() {
+  const t = useTranslations('Footer');
+
   return (
-    <footer className="border-t bg-background">
-      <div className="container py-12">
-        <div className="grid grid-cols-1 gap-8 md:grid-cols-4">
-          <div className="space-y-4">
-            <Link href="/" className="block">
-              <Image
-                src="/logo/harezm_logo.svg"
-                alt="Harezm Technology"
-                width={120}
-                height={40}
-                className="dark:invert"
-              />
-            </Link>
-            <p className="text-sm text-muted-foreground">
-              Harezm Technology is a leading SAP consultancy and software technology firm specializing in innovative solutions.
-            </p>
-          </div>
-          <div>
-            <h3 className="text-lg font-semibold">Quick Links</h3>
-            <ul className="mt-4 space-y-2 text-sm">
+    <footer className="w-full py-6 bg-background">
+      <div className="container flex flex-col gap-4">
+        <div className="grid gap-8 sm:grid-cols-2 md:grid-cols-4">
+          <div className="space-y-3">
+            <h4 className="font-medium">{t('company')}</h4>
+            <ul className="space-y-2">
               <li>
-                <Link href="/services" className="text-muted-foreground hover:text-foreground">
-                  Services
-                </Link>
+                <Link href="/about">{t('about')}</Link>
               </li>
               <li>
-                <Link href="/blog" className="text-muted-foreground hover:text-foreground">
-                  Blog
-                </Link>
+                <Link href="/careers">{t('careers')}</Link>
               </li>
               <li>
-                <Link href="/careers" className="text-muted-foreground hover:text-foreground">
-                  Careers
-                </Link>
-              </li>
-              <li>
-                <Link href="/contact" className="text-muted-foreground hover:text-foreground">
-                  Contact
-                </Link>
+                <Link href="/blog">{t('blog')}</Link>
               </li>
             </ul>
           </div>
-          <div>
-            <h3 className="text-lg font-semibold">Contact</h3>
-            <ul className="mt-4 space-y-2 text-sm text-muted-foreground">
-              <li>Email: info@harezm.com</li>
-              <li>Phone: +1 234 567 890</li>
-              <li>Address: Your Address Here</li>
+          <div className="space-y-3">
+            <h4 className="font-medium">{t('services')}</h4>
+            <ul className="space-y-2">
+              <li>
+                <Link href="/services">{t('all_services')}</Link>
+              </li>
             </ul>
           </div>
-          <div>
-            <h3 className="text-lg font-semibold">Follow Us</h3>
-            <div className="mt-4 flex space-x-4">
-              <Link href="#" className="text-muted-foreground hover:text-foreground">
-                <span className="sr-only">Facebook</span>
-                <Facebook className="h-5 w-5" />
-              </Link>
-              <Link href="#" className="text-muted-foreground hover:text-foreground">
-                <span className="sr-only">Twitter</span>
-                <Twitter className="h-5 w-5" />
-              </Link>
-              <Link href="#" className="text-muted-foreground hover:text-foreground">
-                <span className="sr-only">LinkedIn</span>
-                <Linkedin className="h-5 w-5" />
-              </Link>
-            </div>
+          <div className="space-y-3">
+            <h4 className="font-medium">{t('support')}</h4>
+            <ul className="space-y-2">
+              <li>
+                <Link href="/contact">{t('contact')}</Link>
+              </li>
+              <li>
+                <Link href="/privacy">{t('privacy')}</Link>
+              </li>
+              <li>
+                <Link href="/terms">{t('terms')}</Link>
+              </li>
+            </ul>
+          </div>
+          <div className="space-y-3">
+            <h4 className="font-medium">{t('newsletter')}</h4>
+            <form className="space-y-2">
+              <Input type="email" placeholder={t('email_placeholder')} />
+              <Button type="submit" className="w-full">
+                {t('subscribe')}
+              </Button>
+            </form>
           </div>
         </div>
-        <div className="mt-8 border-t pt-8">
-          <p className="text-center text-sm text-muted-foreground">
-            &copy; {new Date().getFullYear()} Harezm Technology. All rights reserved.
-          </p>
+        <Separator />
+        <div className="flex flex-col gap-4 sm:flex-row sm:gap-6 items-center justify-between">
+          <div className="flex gap-4">
+            <Link href="https://linkedin.com/company/harezm" target="_blank">
+              <Linkedin className="h-5 w-5" />
+            </Link>
+            <Link href="mailto:info@harezm.com">
+              <Mail className="h-5 w-5" />
+            </Link>
+          </div>
+          <div className="flex items-center gap-4">
+            <LanguageToggle />
+            <ModeToggle />
+            <span className="text-sm font-medium">Harezm {t('company_suffix')}</span>
+          </div>
+        </div>
+        <div className="text-sm text-muted-foreground text-center">
+          <p>{t('description')}</p>
+          <p className="mt-2">&copy; 2024 Harezm {t('company_suffix')}. {t('rights')}</p>
         </div>
       </div>
     </footer>

@@ -1,41 +1,120 @@
 {
   "navigation": {
     "home": "Home",
-    "services": "Services & Solutions",
-    "products": "Products",
+    "services": "Services",
     "blog": "Blog",
     "careers": "Careers",
     "contact": "Contact"
   },
   "home": {
     "title": "Harezm Technology",
-    "description": "A leading tech firm specializing in SAP integration, localization, and custom software solutions.",
+    "description": "A technology firm specializing in SAP integration, localization, and custom software solutions.",
     "mission": "Our mission is to provide high-quality, reliable, and innovative solutions to help our clients digitize their businesses."
   },
+  "Index": {
+    "title": "Home",
+    "hero_title": "Harezm Technology",
+    "hero_description": "Harezm Technology optimizes your business processes with innovative software solutions and SAP integration services. Our expert team designs tailor-made solutions to guide your digital transformation. Contact us today and take the first step into your digital future!"
+  },
   "services": {
+    "description": "Comprehensive SAP solutions tailored to your business needs",
     "sap_consultancy": {
       "title": "SAP Consultancy",
+      "description": "Expert consultancy for SAP Public Cloud, Private Cloud, FICO, AA (Asset Accounting), and RE-FX solutions.",
       "items": [
         "SAP Public Cloud Consultancy",
         "SAP Private Cloud Consultancy",
         "SAP FICO, SAP AA (Asset Accounting)",
         "SAP RE-FX (Flexible Real Estate Management)"
-      ]
+      ],
+      "public_cloud": {
+        "title": "SAP Public Cloud Consultancy",
+        "description": "Enable faster and more flexible operations with cloud-based solutions."
+      },
+      "private_cloud": {
+        "title": "SAP Private Cloud Consultancy",
+        "description": "Manage your data securely with private cloud solutions."
+      },
+      "modules": {
+        "title": "SAP FICO, AA, RE-FX Modules",
+        "description": "Get professional support in finance, asset management, and real estate management."
+      }
     },
     "sap_localization": {
       "title": "SAP Localization",
+      "description": "Specialized solutions including Inflation Accounting, VAT Return, and IFRS compliance packages.",
       "items": [
         "Inflation Accounting",
         "VAT Return"
-      ]
+      ],
+      "inflation": {
+        "title": "Inflation Accounting",
+        "description": "Minimize the effects of inflation."
+      },
+      "vat": {
+        "title": "VAT Return",
+        "description": "Streamlined processes for tax compliance."
+      }
     },
     "bank_integration": {
       "title": "Bank Integrations",
+      "description": "Complete banking solutions including Direct Debit System, e-Payment, and e-Account Statement integration.",
       "items": [
         "Direct Debit System (DBS)",
         "Bank e-Account Statement",
         "Bank e-Payment"
-      ]
+      ],
+      "dbs": {
+        "title": "Direct Debit System (DBS)",
+        "description": "Accelerate your payment processes."
+      },
+      "statement": {
+        "title": "Bank e-Account Statement",
+        "description": "Track your accounts electronically."
+      },
+      "payment": {
+        "title": "Bank e-Payment",
+        "description": "Secure and fast payment transactions."
+      }
+    }
+  },
+  "Services": {
+    "title": "Our Services",
+    "description": "Supporting your business in the digital transformation journey",
+    "learn_more": "Learn More",
+    "sap": {
+      "title": "SAP Solutions",
+      "description": "Optimize your SAP systems and create value",
+      "features": {
+        "core": "SAP Core Systems",
+        "cloud": "SAP Cloud Solutions",
+        "financial": "SAP Financial Modules",
+        "consulting": "SAP Consulting"
+      }
+    },
+    "digital": {
+      "title": "Digital Solutions",
+      "description": "Strengthen your digital presence with modern technologies",
+      "features": {
+        "web": "Web Applications",
+        "mobile": "Mobile Applications",
+        "ecommerce": "E-Commerce Solutions",
+        "integration": "System Integrations"
+      }
+    },
+    "consulting": {
+      "title": "Consulting",
+      "description": "Improve your processes with our expert team",
+      "features": {
+        "process": "Process Consulting",
+        "technical": "Technical Consulting",
+        "training": "Training and Development"
+      }
+    },
+    "cta": {
+      "title": "Contact us for your projects",
+      "description": "Let's determine the most suitable solution together",
+      "button": "Contact Us"
     }
   },
   "products": {
@@ -46,7 +125,52 @@
       "SAP IFRS Package",
       "SAP Integration Tools",
       "Custom Software Solutions"
-    ]
+    ],
+    "inflation": {
+      "title": "Inflation Accounting Solution Package",
+      "description": "Align your processes with local tax laws."
+    },
+    "vat": {
+      "title": "SAP VAT Return Package",
+      "description": "Prepare tax returns efficiently."
+    },
+    "ifrs": {
+      "title": "SAP IFRS Package",
+      "description": "Comply with international financial reporting standards."
+    },
+    "integration": {
+      "title": "SAP Integration Tools",
+      "description": "Connect your systems for better efficiency."
+    },
+    "custom": {
+      "title": "Custom Software Solutions",
+      "description": "Software tailored to your business needs."
+    }
+  },
+  "why_choose_us": {
+    "title": "Why Choose Us",
+    "description": "Leading the way in SAP solutions and digital transformation",
+    "comprehensive_solutions": {
+      "title": "Comprehensive Solutions",
+      "description": "From SAP implementation to custom integrations, we provide end-to-end solutions for your business needs."
+    },
+    "innovation_focus": {
+      "title": "Innovation Focus",
+      "description": "We stay ahead of technological trends to deliver cutting-edge solutions that drive your business forward."
+    }
+  },
+  "Blog": {
+    "title": "Blog",
+    "description": "Discover current technology trends and tips about SAP solutions. Access content that will accelerate your digital transformation with Harezm Technology Blog.",
+    "comingSoon": "Coming Soon",
+    "comingSoonDescription": "Our blog page will be launching soon. Here you'll find the latest content about SAP, technology, and business insights."
+  },
+  "Careers": {
+    "title": "Careers",
+    "description": "Working at Harezm Technology means being part of projects that shape the future. Check out our open positions and apply now!"
+  },
+  "common": {
+    "learn_more": "Learn More"
   },
   "careers": {
     "title": "Careers",
@@ -54,8 +178,67 @@
     "cta": "Apply now and join the world of digital solutions!"
   },
   "contact": {
-    "title": "Contact",
+    "title": "Contact Us",
     "form_title": "Get in touch with us",
     "email": "Email: info@harezm.com"
+  },
+  "Contact": {
+    "title": "Contact",
+    "description": "Fill out the form below to get in touch with us.",
+    "name": "Full Name",
+    "name_placeholder": "Enter your full name",
+    "email": "Email",
+    "email_placeholder": "Enter your email address",
+    "subject": "Subject",
+    "subject_placeholder": "Enter the subject of your message",
+    "message": "Message",
+    "message_placeholder": "Write your message here",
+    "submit": "Send",
+    "contact_info": "Contact Information",
+    "email_title": "Email"
+  },
+  "404": {
+    "title": "404 - Page Not Found",
+    "description": "The page you are looking for does not exist.",
+    "return_home": "Return to Home"
+  },
+  "Footer": {
+    "company": "Company",
+    "about": "About",
+    "careers": "Careers",
+    "blog": "Blog",
+    "services": "Services",
+    "all_services": "Our Services",
+    "support": "Support",
+    "contact": "Contact",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service",
+    "newsletter": "Newsletter",
+    "email_placeholder": "Enter your email",
+    "subscribe": "Subscribe",
+    "rights": "All rights reserved.",
+    "company_suffix": "Technology Inc.",
+    "description": "Harezm Technology is a technology company specializing in enterprise software solutions, digital transformation, and innovative AI applications. We are with businesses on their journey to a digital future."
+  },
+  "footer": {
+    "description": "Harezm is a technology company specializing in enterprise software solutions, digital transformation, and innovative AI applications. We are with businesses on their journey to a digital future.",
+    "company": "Company",
+    "about": "About Us",
+    "careers": "Careers",
+    "contact": "Contact",
+    "legal": "Legal",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service",
+    "connect": "Connect",
+    "rights": "All rights reserved.",
+    "company_suffix": "Technology Inc."
+  },
+  "Nav": {
+    "about": "About",
+    "services": "Services",
+    "products": "Products",
+    "blog": "Blog",
+    "careers": "Careers",
+    "contact": "Contact"
   }
 }

@@ -1,0 +1,32 @@
+.paint-stroke {
+  position: relative;
+  display: inline-block;
+  z-index: 1;
+}
+
+.paint-stroke::before {
+  content: "";
+  position: absolute;
+  left: -10px;
+  right: -10px;
+  top: -5px;
+  bottom: -5px;
+  background-color: #FFD700; /* Yellow color, you can change this */
+  z-index: -1;
+  transform: skew(-3deg, 1deg);
+  border-radius: 4px;
+  /* Add rough edges using clip-path */
+  clip-path: polygon(
+    0% 15%, 5% 10%, 15% 5%, 25% 0%, 75% 0%, 85% 5%, 95% 10%, 100% 15%,
+    100% 85%, 95% 90%, 85% 95%, 75% 100%, 25% 100%, 15% 95%, 5% 90%, 0% 85%
+  );
+}
+
+/* Optional: Add hover animation */
+.paint-stroke::before {
+  transition: transform 0.3s ease;
+}
+
+.paint-stroke:hover::before {
+  transform: skew(-5deg, 2deg) scale(1.05);
+}

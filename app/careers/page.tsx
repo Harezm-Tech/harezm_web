@@ -3,6 +3,7 @@
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { motion } from "@/components/motion"
+import PaintStroke from "@/components/PaintStroke"
 import {
   Card,
   CardContent,
@@ -59,9 +60,11 @@ export default function CareersPage() {
         <h1 className="font-heading text-3xl leading-[1.1] sm:text-3xl md:text-6xl">
           Join Our Team
         </h1>
-        <p className="max-w-[85%] leading-normal text-muted-foreground sm:text-lg sm:leading-7">
-          Be part of a team that's shaping the future of SAP solutions and digital transformation
-        </p>
+        <span className="block max-w-[85%] leading-normal text-muted-foreground sm:text-lg sm:leading-7">
+          Be part of a team that's shaping the future of 
+          <PaintStroke variant="purple" className="mx-2">SAP solutions</PaintStroke> and 
+          <PaintStroke variant="cyan" className="mx-2">digital transformation</PaintStroke>
+        </span>
       </div>
 
       <div className="mt-16 grid gap-6">
@@ -70,7 +73,9 @@ export default function CareersPage() {
             <CardHeader>
               <div className="flex items-center justify-between">
                 <div>
-                  <CardTitle>{job.title}</CardTitle>
+                  <CardTitle>
+                    <PaintStroke variant="yellow">{job.title}</PaintStroke>
+                  </CardTitle>
                   <CardDescription className="mt-2">{job.location}</CardDescription>
                 </div>
                 <Badge variant="secondary">{job.type}</Badge>
@@ -78,9 +83,11 @@ export default function CareersPage() {
             </CardHeader>
             <CardContent>
               <div className="space-y-4">
-                <p>{job.description}</p>
+                <span className="block">{job.description}</span>
                 <div>
-                  <h4 className="font-medium mb-2">Requirements:</h4>
+                  <h4 className="font-medium mb-2">
+                    <PaintStroke variant="purple">Requirements:</PaintStroke>
+                  </h4>
                   <ul className="list-disc pl-5 space-y-1">
                     {job.requirements.map((req) => (
                       <li key={req}>{req}</li>
@@ -99,9 +106,10 @@ export default function CareersPage() {
       </div>
 
       <div className="mt-16 text-center">
-        <p className="text-muted-foreground mb-4">
-          Don&apos;t see a position that matches your skills? Send us your CV anyway!
-        </p>
+        <span className="block text-muted-foreground mb-4">
+          Don't see a position that matches your skills? 
+          <PaintStroke variant="cyan" className="mx-2">Send us your CV anyway!</PaintStroke>
+        </span>
         <Button asChild variant="outline">
           <Link href="/contact">Contact Us</Link>
         </Button>

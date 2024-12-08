@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="200" height="80" viewBox="0 0 200 80" version="1.1" xmlns="http://www.w3.org/2000/svg">
+    <style>
+        .main-text { font-family: 'Arial', sans-serif; font-weight: bold; }
+    </style>
+    <g fill="#000000">
+        <path class="zero-path" d="M40 15C57.673 15 72 29.327 72 47C72 64.673 57.673 79 40 79C22.327 79 8 64.673 8 47C8 29.327 22.327 15 40 15ZM40 25C27.85 25 18 34.85 18 47C18 59.15 27.85 69 40 69C52.15 69 62 59.15 62 47C62 34.85 52.15 25 40 25Z"/>
+    </g>
+</svg>

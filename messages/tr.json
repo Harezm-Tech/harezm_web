@@ -1,61 +1,216 @@
 {
   "navigation": {
     "home": "Ana Sayfa",
-    "services": "Hizmetler ve Çözümler",
-    "products": "Ürünler",
+    "services": "Hizmetler",
     "blog": "Blog",
     "careers": "Kariyer",
     "contact": "İletişim"
   },
   "home": {
     "title": "Harezm Teknoloji",
-    "description": "SAP entegrasyonu, yerelleştirme ve özelleştirilmiş yazılım çözümleri alanında lider bir teknoloji firmasıdır.",
+    "description": "SAP entegrasyonu, yerelleştirme ve özelleştirilmiş yazılım çözümleri alanında uzmanlaşmış bir teknoloji firmasıdır.",
     "mission": "Misyonumuz, müşterilerimize yüksek kaliteli, güvenilir ve yenilikçi çözümler sunarak işlerini dijitalleştirmelerine destek olmaktır."
   },
+  "Index": {
+    "title": "Ana Sayfa",
+    "hero_title": "Harezm Teknoloji",
+    "hero_description": "Harezm Teknoloji, yenilikçi yazılım çözümleri ve SAP entegrasyon hizmetleriyle iş süreçlerinizi optimize eder. Uzman ekibimiz, iş ihtiyaçlarınıza özel çözümler geliştirerek dijital dönüşümünüzde size rehberlik eder. Hemen bizimle iletişime geçin ve dijital geleceğinize adım atın!"
+  },
   "services": {
+    "title": "Hizmetler ve Çözümler",
+    "description": "İşletmenizin ihtiyaçlarına özel kapsamlı SAP çözümleri",
     "sap_consultancy": {
       "title": "SAP Danışmanlığı",
+      "description": "SAP Public Cloud, Private Cloud, FICO, AA (Varlık Muhasebesi) ve RE-FX çözümleri için uzman danışmanlık.",
       "items": [
         "SAP Public Cloud Danışmanlığı",
         "SAP Private Cloud Danışmanlığı",
-        "SAP FICO, SAP AA (Sabit Kıymet Muhasebesi)",
+        "SAP FICO, SAP AA (Varlık Muhasebesi)",
         "SAP RE-FX (Esnek Gayrimenkul Yönetimi)"
-      ]
+      ],
+      "public_cloud": {
+        "title": "SAP Public Cloud Danışmanlığı",
+        "description": "İşletmenizin bulut tabanlı çözümlerle daha hızlı ve esnek çalışmasını sağlayın."
+      },
+      "private_cloud": {
+        "title": "SAP Private Cloud Danışmanlığı",
+        "description": "Özel bulut çözümleriyle verilerinizi güvenle yönetin."
+      },
+      "modules": {
+        "title": "SAP FICO, AA, RE-FX Modülleri",
+        "description": "Finans, sabit kıymet ve gayrimenkul yönetimi alanında profesyonel destek alın."
+      }
     },
     "sap_localization": {
-      "title": "SAP Yerelleştirme",
-      "items": [
-        "Enflasyon Muhasebesi",
-        "KDV Beyanı"
-      ]
+      "title": "SAP Lokalizasyon",
+      "description": "Enflasyon Muhasebesi, KDV Beyannamesi ve UFRS uyumluluğu paketleri dahil özelleştirilmiş çözümler.",
+      "inflation": {
+        "title": "Enflasyon Muhasebesi",
+        "description": "Enflasyonun etkilerini minimize edin."
+      },
+      "vat": {
+        "title": "KDV Beyannamesi",
+        "description": "Vergi uyumluluğu için optimize edilmiş süreçler."
+      }
     },
     "bank_integration": {
       "title": "Banka Entegrasyonları",
+      "description": "Doğrudan Borçlandırma Sistemi, e-Ödeme ve e-Hesap Ekstresi entegrasyonu dahil eksiksiz bankacılık çözümleri.",
       "items": [
         "Doğrudan Borçlandırma Sistemi (DBS)",
         "Banka e-Hesap Ekstresi",
         "Banka e-Ödeme"
-      ]
+      ],
+      "dbs": {
+        "title": "Doğrudan Borçlandırma Sistemi (DBS)",
+        "description": "Ödeme süreçlerinizi hızlandırın ve otomatikleştirin."
+      },
+      "statement": {
+        "title": "Banka e-Hesap Ekstresi",
+        "description": "Hesaplarınızı elektronik ortamda takip edin ve yönetin."
+      },
+      "payment": {
+        "title": "Banka e-Ödeme",
+        "description": "Güvenli ve hızlı ödeme işlemlerini otomatikleştirin."
+      }
     }
   },
-  "products": {
-    "title": "Ürünler",
-    "items": [
-      "Enflasyon Muhasebesi Çözüm Paketi",
-      "SAP KDV Beyanı Paketi",
-      "SAP IFRS Paketi",
-      "SAP Entegrasyon Araçları",
-      "Özelleştirilmiş Yazılım Çözümleri"
-    ]
+  "Services": {
+    "title": "Hizmetlerimiz",
+    "description": "İşletmenizi dijital dönüşüm yolculuğunda destekliyoruz",
+    "learn_more": "Detaylı Bilgi",
+    "sap": {
+      "title": "SAP Çözümleri",
+      "description": "SAP sistemlerinizi optimize edin ve değer yaratın",
+      "features": {
+        "core": "SAP Core Sistemleri",
+        "cloud": "SAP Cloud Çözümleri",
+        "financial": "SAP Finans Modülleri",
+        "consulting": "SAP Danışmanlık"
+      }
+    },
+    "digital": {
+      "title": "Dijital Çözümler",
+      "description": "Modern teknolojilerle dijital varlığınızı güçlendirin",
+      "features": {
+        "web": "Web Uygulamaları",
+        "mobile": "Mobil Uygulamalar",
+        "ecommerce": "E-Ticaret Çözümleri",
+        "integration": "Sistem Entegrasyonları"
+      }
+    },
+    "consulting": {
+      "title": "Danışmanlık",
+      "description": "Uzman ekibimizle süreçlerinizi iyileştirin",
+      "features": {
+        "process": "Süreç Danışmanlığı",
+        "technical": "Teknik Danışmanlık",
+        "training": "Eğitim ve Geliştirme"
+      }
+    },
+    "cta": {
+      "title": "Projeleriniz için bizimle iletişime geçin",
+      "description": "Size en uygun çözümü birlikte belirleyelim",
+      "button": "İletişime Geçin"
+    }
   },
-  "careers": {
+  "Products": {
+    "title": "Ürünlerimiz",
+    "inflation": {
+      "title": "Enflasyon Muhasebesi Çözüm Paketi",
+      "description": "Süreçlerinizi yerel vergi kanunlarıyla uyumlu hale getirin."
+    },
+    "vat": {
+      "title": "SAP KDV Beyanname Paketi",
+      "description": "Vergi beyannamelerinizi verimli bir şekilde hazırlayın."
+    },
+    "ifrs": {
+      "title": "SAP UFRS Paketi",
+      "description": "Uluslararası finansal raporlama standartlarına uyum sağlayın."
+    },
+    "integration": {
+      "title": "SAP Entegrasyon Araçları",
+      "description": "Sistemlerinizi daha iyi verimlilik için bağlayın."
+    },
+    "custom": {
+      "title": "Özel Yazılım Çözümleri",
+      "description": "İşletmenizin ihtiyaçlarına özel yazılımlar."
+    }
+  },
+  "Blog": {
+    "title": "Blog",
+    "description": "Güncel teknoloji trendlerini ve SAP çözümleriyle ilgili ipuçlarını keşfedin. Harezm Teknoloji Blog ile dijital dönüşümünüzü hızlandıracak içeriklere ulaşın.",
+    "comingSoon": "Çok Yakında",
+    "comingSoonDescription": "Blog sayfamız yakında sizlerle olacak. Burada SAP, teknoloji ve iş dünyası hakkında güncel içerikler bulabileceksiniz."
+  },
+  "Careers": {
     "title": "Kariyer",
-    "description": "Açık Pozisyonlar",
-    "cta": "Hemen başvurun ve dijital çözümler dünyasına katılın!"
+    "description": "Harezm Teknoloji'de çalışmak, geleceği şekillendiren projelerin bir parçası olmak demektir. Açık pozisyonlarımızı inceleyin ve başvurun!"
   },
-  "contact": {
+  "Contact": {
     "title": "İletişim",
-    "form_title": "Bizimle iletişime geçin",
-    "email": "E-posta: info@harezm.com"
+    "description": "Bizimle iletişime geçmek için aşağıdaki formu doldurun.",
+    "name": "Ad Soyad",
+    "name_placeholder": "Adınızı ve soyadınızı girin",
+    "email": "E-posta",
+    "email_placeholder": "E-posta adresinizi girin",
+    "subject": "Konu",
+    "subject_placeholder": "Mesajınızın konusunu girin",
+    "message": "Mesaj",
+    "message_placeholder": "Mesajınızı buraya yazın",
+    "submit": "Gönder",
+    "contact_info": "İletişim Bilgileri",
+    "email_title": "E-posta"
+  },
+  "Nav": {
+    "about": "Hakkımızda",
+    "services": "Hizmetler",
+    "products": "Ürünlerimiz",
+    "blog": "Blog",
+    "careers": "Kariyer",
+    "contact": "İletişim"
+  },
+  "why_choose_us": {
+    "title": "Neden Biz?",
+    "description": "SAP çözümleri ve dijital dönüşümde uzman",
+    "comprehensive_solutions": {
+      "title": "Kapsamlı Çözümler",
+      "description": "SAP implementasyonundan özel entegrasyonlara kadar, işletmenizin ihtiyaçları için uçtan uca çözümler sunuyoruz."
+    },
+    "innovation_focus": {
+      "title": "İnovasyon Odaklı",
+      "description": "İşletmenizi ileriye taşıyacak en son teknolojik trendleri takip ediyor ve yenilikçi çözümler sunuyoruz."
+    }
+  },
+  "404": {
+    "title": "404 - Sayfa Bulunamadı",
+    "description": "Aradığınız sayfa mevcut değil.",
+    "return_home": "Ana Sayfaya Dön"
+  },
+  "common": {
+    "learn_more": "Detaylı Bilgi"
+  },
+  "Footer": {
+    "company": "Şirket",
+    "about": "Hakkımızda",
+    "careers": "Kariyer",
+    "blog": "Blog",
+    "services": "Hizmetler",
+    "all_services": "Hizmetlerimiz",
+    "support": "Destek",
+    "contact": "İletişim",
+    "privacy": "Gizlilik Politikası",
+    "terms": "Kullanım Koşulları",
+    "newsletter": "Bülten",
+    "email_placeholder": "E-posta adresiniz",
+    "subscribe": "Abone Ol",
+    "rights": "Tüm hakları saklıdır.",
+    "company_suffix": "Teknoloji A.Ş.",
+    "description": "Harezm Teknoloji, kurumsal yazılım çözümleri, dijital dönüşüm ve yenilikçi yapay zeka uygulamalarında uzmanlaşmış bir teknoloji şirketidir. İşletmelerin dijital geleceğe yolculuğunda yanlarındayız."
+  },
+  "about": {
+    "title": "Hakkımızda",
+    "description": "Harezm Teknoloji, işletmelerin dijital dönüşüm yolculuğunda güvenilir teknoloji ortağıdır. SAP çözümleri, iş süreçleri optimizasyonu ve özel yazılım geliştirme alanlarında uzmanlaşmış ekibimizle, şirketinizin dijital geleceğini inşa ediyoruz.",
+    "mission": "Vizyoner bakış açımız ve teknoloji uzmanlığımızla, işletmelerin dijital dönüşümünü hızlandırarak, sürdürülebilir başarıya ulaşmalarını sağlamaktır."
   }
 }

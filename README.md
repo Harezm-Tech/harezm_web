@@ -1,116 +1,78 @@
-# Harezm.com - Modern Web Development Solutions
+# Harezm Technology Website
 
-<div align="center">
-  <img src="public/logo.png" alt="Harezm Logo" width="200"/>
-  <h3>Building the Future of Web Development</h3>
-  
-  [![Next.js](https://img.shields.io/badge/Next.js-15.0-black?style=flat&logo=next.js)](https://nextjs.org/)
-  [![TypeScript](https://img.shields.io/badge/TypeScript-5.3-blue?style=flat&logo=typescript)](https://www.typescriptlang.org/)
-  [![Tailwind CSS](https://img.shields.io/badge/Tailwind-3.3-38B2AC?style=flat&logo=tailwind-css)](https://tailwindcss.com/)
-  [![Vercel](https://img.shields.io/badge/Vercel-Deployed-000000?style=flat&logo=vercel)](https://harezm.com)
-</div>
+Welcome to the official repository of the Harezm Technology website. Built with modern web technologies to deliver a fast, responsive, and engaging user experience.
 
-## 🚀 About Harezm
+## 🚀 Features
 
-Harezm is a cutting-edge technology company specializing in modern web development solutions. We combine innovative technologies with elegant design to create exceptional digital experiences.
-
-### 🌟 Key Features
-
-- **Modern Tech Stack**: Built with Next.js 15, TypeScript, and Tailwind CSS
-- **Responsive Design**: Seamless experience across all devices
-- **Internationalization**: Multi-language support with next-intl
-- **Dark Mode**: Elegant theme switching with next-themes
-- **Accessibility**: WCAG compliant with full keyboard navigation
-- **Performance**: Optimized with Next.js 15's partial prerendering
+- **Next.js 15** - For server-side rendering and routing
+- **TypeScript** - For type-safe code
+- **Tailwind CSS** - For styling
+- **next-intl** - For internationalization
+- **Zustand** - For state management
+- **Framer Motion** - For animations
+- **shadcn/ui** - For UI components
 
 ## 🛠️ Tech Stack
 
-- **Frontend Framework**: Next.js 15
-- **Language**: TypeScript
-- **Styling**: Tailwind CSS + shadcn/ui
-- **State Management**: Zustand
-- **Animations**: Framer Motion
-- **Icons**: Lucide Icons
-- **Deployment**: Vercel
+- Framework: Next.js 15
+- Language: TypeScript
+- Styling: Tailwind CSS
+- State Management: Zustand
+- UI Components: shadcn/ui
+- Animations: Framer Motion
+- Internationalization: next-intl
 
 ## 🚀 Getting Started
 
-### Prerequisites
-
-- Node.js 20.x or later
-- npm or yarn
-- Git
-
-### Installation
-
-1. Clone the repository:
+1. **Clone the repository**
    ```bash
    git clone https://github.com/Harezm-Tech/harezm_web.git
-   cd harezm_web
    ```
 
-2. Install dependencies:
+2. **Install dependencies**
    ```bash
    npm install
    ```
 
-3. Set up environment variables:
-   ```bash
-   cp .env.example .env.local
-   ```
-
-4. Start the development server:
+3. **Run the development server**
    ```bash
    npm run dev
    ```
 
-Visit [http://localhost:3000](http://localhost:3000) to see the application.
+4. **Build for production**
+   ```bash
+   npm run build
+   ```
 
-## 🌍 Internationalization
+## 🌐 Environment Variables
 
-Harezm supports multiple languages out of the box:
-
-- 🇺🇸 English
-- 🇹🇷 Turkish
-
-To add a new translation:
-1. Add locale file in `/messages`
-2. Update language switcher component
-3. Add locale to i18n configuration
-
-## 🎨 UI Components
-
-We use shadcn/ui for our component library. To add new components:
-
-```bash
-npx shadcn-ui add [component-name]
-```
+No environment variables are required for basic setup.
 
 ## 📱 Features
 
-- **Modern Design**: Clean and professional user interface
-- **Responsive**: Mobile-first approach
-- **Performance**: Optimized for speed and SEO
-- **Accessibility**: WCAG 2.1 compliant
-- **Dark Mode**: Elegant theme switching
-- **Analytics**: Built-in performance monitoring
+- Responsive Design
+- Dark/Light Mode
+- Multi-language Support (English, Turkish)
+- SEO Optimized
+- Modern UI/UX
+- Fast Performance
+- Accessibility Support
 
 ## 🤝 Contributing
 
-We welcome contributions! Please see our [Contributing Guidelines](CONTRIBUTING.md) for details.
+1. Fork the repository
+2. Create your feature branch
+3. Commit your changes
+4. Push to the branch
+5. Open a pull request
 
-## 📜 License
+## 📄 License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## 🔗 Links
-
-- [Website](https://harezm.com)
-- [Documentation](https://docs.harezm.com)
-- [GitHub](https://github.com/Harezm-Tech)
+This project is licensed under the MIT License.
 
 ## 📞 Contact
 
+- Website: [harezm.com](https://harezm.com)
 - Email: [contact@harezm.com](mailto:contact@harezm.com)
 - Twitter: [@HarezmTech](https://twitter.com/HarezmTech)
 - LinkedIn: [Harezm Technology](https://linkedin.com/company/harezm)

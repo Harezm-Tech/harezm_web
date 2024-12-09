@@ -1,0 +1,13 @@
+@echo off
+echo Killing processes on ports 3000 and 3001...
+for /f "tokens=5" %%a in ('netstat -aon ^| findstr ":3000"') do taskkill /F /PID %%a 2>nul
+for /f "tokens=5" %%a in ('netstat -aon ^| findstr ":3001"') do taskkill /F /PID %%a 2>nul
+
+echo Killing Spartan processes...
+powershell -Command "Get-Process | Where-Object {$_.MainWindowTitle -like '*Spartan*'} | Stop-Process -Force" 2>nul
+
+echo Cleaning .next directory...
+rd /s /q .next 2>nul
+
+echo Starting development server...
+npm run dev

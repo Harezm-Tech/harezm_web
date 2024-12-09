@@ -31,6 +31,13 @@
     --border: 240 6% 90%;
     --input: 240 6% 90%;
     --ring: 169 52% 77%;
+
+    /* Brand-colored icon highlights with increased saturation */
+    --icon-highlight-1: 169 75% 77%;  /* Primary (Turquoise) - more saturated */
+    --icon-highlight-2: 47 85% 82%;   /* Secondary (Warm Gold) - more saturated */
+    --icon-highlight-3: 276 80% 83%;  /* Accent (Purple) - more saturated */
+    --icon-highlight-4: 169 75% 77%;  /* Primary Again */
+    --icon-glow: 0 0% 100%;          /* White glow for light theme */
  
     --radius: 0.5rem;
     --theme-transition-color: 0, 0, 0;  /* Black for light to dark */
@@ -56,19 +63,27 @@
     --accent: 276 67% 83%;
     --accent-foreground: 276 67% 26%;
  
-    --muted: 240 21% 16%;
-    --muted-foreground: 240 5% 75%;
+    --muted: 240 21% 12%;
+    --muted-foreground: 240 5% 64%;
  
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 98%;
  
-    --border: 240 21% 18%;
+    --border: 240 21% 16%;
     --input: 240 21% 16%;
     --ring: 169 52% 77%;
+
+    /* Dark theme brand-colored icon highlights with increased saturation and brightness */
+    --icon-highlight-1: 169 85% 82%;  /* Primary - brighter & more saturated */
+    --icon-highlight-2: 47 90% 87%;   /* Secondary - brighter & more saturated */
+    --icon-highlight-3: 276 85% 88%;  /* Accent - brighter & more saturated */
+    --icon-highlight-4: 169 85% 82%;  /* Primary Again */
+    --icon-glow: 224 71% 4%;         /* Dark background for glow effect */
+    
     --theme-transition-color: 255, 255, 255;  /* White for dark to light */
   }
 }
- 
+
 @layer base {
   * {
     @apply border-border;

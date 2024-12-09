@@ -21,6 +21,8 @@ import {
   Calculator,
   BarChart3,
 } from 'lucide-react'
+import { HighlightedIcon } from "@/components/ui/highlighted-icon"
+import { cn } from "@/lib/utils"
 
 const services = [
   {
@@ -106,27 +108,53 @@ export default function ServicesPage() {
 
       <div className="mt-16 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
         {services.map((service) => (
-          <Card key={service.title} className="flex flex-col hover:shadow-lg transition-shadow duration-200">
+          <Card 
+            key={service.title} 
+            className={cn(
+              "flex flex-col relative overflow-hidden",
+              "transition-all duration-300 ease-in-out",
+              "hover:shadow-lg hover:shadow-[hsl(var(--icon-highlight-1))]",
+              "before:absolute before:inset-0 before:opacity-0 before:transition-opacity",
+              "before:duration-300 hover:before:opacity-5",
+              service.icon === Bank ? "before:bg-[hsl(var(--icon-highlight-1))]" :
+              service.icon === CloudCog ? "before:bg-[hsl(var(--icon-highlight-2))]" :
+              service.icon === ArrowUpCircle ? "before:bg-[hsl(var(--icon-highlight-3))]" :
+              service.icon === Building2 ? "before:bg-[hsl(var(--icon-highlight-1))]" :
+              service.icon === BarChart3 ? "before:bg-[hsl(var(--icon-highlight-2))]" :
+              "before:bg-[hsl(var(--icon-highlight-3))]"
+            )}
+          >
             <CardHeader>
               <div className="flex items-center space-x-4">
-                <div className={`p-2 rounded-lg ${
-                  service.icon === Bank ? 'bg-mint/40' :
-                  service.icon === CloudCog ? 'bg-gold/40' :
-                  service.icon === ArrowUpCircle ? 'bg-lavender/40' :
-                  service.icon === Building2 ? 'bg-mint/40' :
-                  service.icon === BarChart3 ? 'bg-gold/40' :
-                  'bg-lavender/40'
-                }`}>
-                  <service.icon className={`h-6 w-6 ${
-                    service.icon === Bank ? 'text-mint' :
-                    service.icon === CloudCog ? 'text-gold' :
-                    service.icon === ArrowUpCircle ? 'text-lavender' :
-                    service.icon === Building2 ? 'text-mint' :
-                    service.icon === BarChart3 ? 'text-gold' :
-                    'text-lavender'
-                  }`} />
+                <div className={cn(
+                  "p-3 rounded-xl transition-all duration-300",
+                  "bg-opacity-15 group-hover:bg-opacity-25",
+                  "backdrop-blur-[2px]",
+                  service.icon === Bank ? "bg-[hsl(var(--icon-highlight-1))]" :
+                  service.icon === CloudCog ? "bg-[hsl(var(--icon-highlight-2))]" :
+                  service.icon === ArrowUpCircle ? "bg-[hsl(var(--icon-highlight-3))]" :
+                  service.icon === Building2 ? "bg-[hsl(var(--icon-highlight-1))]" :
+                  service.icon === BarChart3 ? "bg-[hsl(var(--icon-highlight-2))]" :
+                  "bg-[hsl(var(--icon-highlight-3))]"
+                )}>
+                  <HighlightedIcon 
+                    variant={
+                      service.icon === Bank ? "1" :
+                      service.icon === CloudCog ? "2" :
+                      service.icon === ArrowUpCircle ? "3" :
+                      service.icon === Building2 ? "1" :
+                      service.icon === BarChart3 ? "2" :
+                      "3"
+                    }
+                    glowEffect
+                    className="transform transition-transform duration-300 hover:scale-110"
+                  >
+                    <service.icon className="h-7 w-7" />
+                  </HighlightedIcon>
                 </div>
-                <CardTitle className="text-xl">{service.title}</CardTitle>
+                <CardTitle className="text-xl transition-colors duration-300 group-hover:text-[hsl(var(--foreground))]">
+                  {service.title}
+                </CardTitle>
               </div>
             </CardHeader>
             <CardContent className="flex-grow">
@@ -134,9 +162,11 @@ export default function ServicesPage() {
                 <span className="block text-muted-foreground">
                   {service.description}
                 </span>
-                <ul className="list-disc pl-5 space-y-1 text-muted-foreground">
+                <ul className="list-disc pl-5 space-y-2 text-muted-foreground">
                   {service.features.map((feature) => (
-                    <li key={feature}>{feature}</li>
+                    <li key={feature} className="transition-colors duration-300 hover:text-foreground">
+                      {feature}
+                    </li>
                   ))}
                 </ul>
               </div>
@@ -144,16 +174,25 @@ export default function ServicesPage() {
             <CardFooter>
               <Button 
                 asChild
-                className={`w-full ${
-                  service.icon === Bank ? 'bg-mint hover:bg-mint/90 text-primary-foreground' :
-                  service.icon === CloudCog ? 'bg-gold hover:bg-gold/90 text-primary-foreground' :
-                  service.icon === ArrowUpCircle ? 'bg-lavender hover:bg-lavender/90 text-primary-foreground' :
-                  service.icon === Building2 ? 'bg-mint hover:bg-mint/90 text-primary-foreground' :
-                  service.icon === BarChart3 ? 'bg-gold hover:bg-gold/90 text-primary-foreground' :
-                  'bg-lavender hover:bg-lavender/90 text-primary-foreground'
-                }`}
+                className={cn(
+                  "w-full transition-all duration-300",
+                  "transform hover:scale-[1.02]",
+                  "shadow-sm hover:shadow-md",
+                  service.icon === Bank ? 
+                    "bg-[hsl(var(--icon-highlight-1))] hover:bg-[hsl(var(--icon-highlight-1))] hover:brightness-110" :
+                  service.icon === CloudCog ? 
+                    "bg-[hsl(var(--icon-highlight-2))] hover:bg-[hsl(var(--icon-highlight-2))] hover:brightness-110" :
+                  service.icon === ArrowUpCircle ? 
+                    "bg-[hsl(var(--icon-highlight-3))] hover:bg-[hsl(var(--icon-highlight-3))] hover:brightness-110" :
+                  service.icon === Building2 ? 
+                    "bg-[hsl(var(--icon-highlight-1))] hover:bg-[hsl(var(--icon-highlight-1))] hover:brightness-110" :
+                  service.icon === BarChart3 ? 
+                    "bg-[hsl(var(--icon-highlight-2))] hover:bg-[hsl(var(--icon-highlight-2))] hover:brightness-110" :
+                    "bg-[hsl(var(--icon-highlight-3))] hover:bg-[hsl(var(--icon-highlight-3))] hover:brightness-110",
+                  "text-background font-medium"
+                )}
               >
-                <Link href="/contact">Learn More</Link>
+                <Link href="/contact" className="w-full py-2">Learn More</Link>
               </Button>
             </CardFooter>
           </Card>
@@ -165,7 +204,7 @@ export default function ServicesPage() {
           Looking for a specific solution? 
           <PaintStroke variant="cyan">Let's discuss your requirements</PaintStroke>
         </span>
-        <Button asChild variant="outline">
+        <Button asChild variant="outline" className="hover:scale-105 transition-transform duration-300">
           <Link href="/contact">Contact Us</Link>
         </Button>
       </div>

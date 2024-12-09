@@ -28,6 +28,8 @@ import {
   Coffee,
   Zap
 } from 'lucide-react';
+import { HighlightedIcon } from "@/components/ui/highlighted-icon";
+import { cn } from "@/lib/utils";
 
 const perks = [
   {
@@ -152,7 +154,7 @@ export default function CareersPage() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.2 }}
         >
-          Be part of a team that\'s shaping the future of technology
+          Be part of a team that's shaping the future of technology
         </motion.p>
       </div>
 
@@ -167,15 +169,41 @@ export default function CareersPage() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
             >
-              <Card className="h-full">
+              <Card className={cn(
+                "h-full relative overflow-hidden group",
+                "transition-all duration-300 ease-in-out",
+                "hover:shadow-lg",
+                "before:absolute before:inset-0 before:opacity-0 before:transition-opacity",
+                "before:duration-300 hover:before:opacity-5",
+                index % 3 === 0 ? "before:bg-[hsl(var(--icon-highlight-1))] hover:shadow-[hsl(var(--icon-highlight-1))]" :
+                index % 3 === 1 ? "before:bg-[hsl(var(--icon-highlight-2))] hover:shadow-[hsl(var(--icon-highlight-2))]" :
+                "before:bg-[hsl(var(--icon-highlight-3))] hover:shadow-[hsl(var(--icon-highlight-3))]"
+              )}>
                 <CardHeader>
-                  <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4">
-                    <perk.icon className="w-6 h-6 text-primary" />
+                  <div className={cn(
+                    "w-14 h-14 rounded-xl transition-all duration-300",
+                    "flex items-center justify-center mb-4",
+                    "bg-opacity-15 group-hover:bg-opacity-25 backdrop-blur-[2px]",
+                    index % 3 === 0 ? "bg-[hsl(var(--icon-highlight-1))]" :
+                    index % 3 === 1 ? "bg-[hsl(var(--icon-highlight-2))]" :
+                    "bg-[hsl(var(--icon-highlight-3))]"
+                  )}>
+                    <HighlightedIcon 
+                      variant={index % 3 === 0 ? "1" : index % 3 === 1 ? "2" : "3"}
+                      glowEffect
+                      className="transform transition-transform duration-300 group-hover:scale-110"
+                    >
+                      <perk.icon className="w-7 h-7" />
+                    </HighlightedIcon>
                   </div>
-                  <CardTitle>{perk.title}</CardTitle>
+                  <CardTitle className="transition-colors duration-300 group-hover:text-[hsl(var(--foreground))]">
+                    {perk.title}
+                  </CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-muted-foreground">{perk.description}</p>
+                  <p className="text-muted-foreground transition-colors duration-300 group-hover:text-foreground/80">
+                    {perk.description}
+                  </p>
                 </CardContent>
               </Card>
             </motion.div>
@@ -194,42 +222,75 @@ export default function CareersPage() {
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
             >
-              <Card>
+              <Card className={cn(
+                "group relative overflow-hidden",
+                "transition-all duration-300 ease-in-out",
+                "hover:shadow-lg",
+                "before:absolute before:inset-0 before:opacity-0 before:transition-opacity",
+                "before:duration-300 hover:before:opacity-5",
+                index % 2 === 0 ? "before:bg-[hsl(var(--icon-highlight-1))] hover:shadow-[hsl(var(--icon-highlight-1))]" :
+                "before:bg-[hsl(var(--icon-highlight-2))] hover:shadow-[hsl(var(--icon-highlight-2))]"
+              )}>
                 <CardHeader>
                   <div className="flex justify-between items-start">
                     <div>
-                      <CardTitle className="text-2xl mb-2">{position.title}</CardTitle>
+                      <CardTitle className="text-2xl mb-2 transition-colors duration-300 group-hover:text-[hsl(var(--foreground))]">
+                        {position.title}
+                      </CardTitle>
                       <div className="flex gap-4 text-sm text-muted-foreground">
-                        <span className="flex items-center gap-1">
-                          <MapPin className="w-4 h-4" />
+                        <span className="flex items-center gap-1 transition-colors duration-300 group-hover:text-foreground/80">
+                          <HighlightedIcon variant="1" className="inline-flex">
+                            <MapPin className="w-4 h-4" />
+                          </HighlightedIcon>
                           {position.location}
                         </span>
-                        <span className="flex items-center gap-1">
-                          <Clock className="w-4 h-4" />
+                        <span className="flex items-center gap-1 transition-colors duration-300 group-hover:text-foreground/80">
+                          <HighlightedIcon variant="2" className="inline-flex">
+                            <Clock className="w-4 h-4" />
+                          </HighlightedIcon>
                           {position.type}
                         </span>
                       </div>
                     </div>
-                    <Button asChild>
-                      <Link href="/contact">Apply Now</Link>
+                    <Button 
+                      asChild
+                      className={cn(
+                        "transition-all duration-300",
+                        "transform hover:scale-[1.02]",
+                        "shadow-sm hover:shadow-md",
+                        index % 2 === 0 
+                          ? "bg-[hsl(var(--icon-highlight-1))] hover:bg-[hsl(var(--icon-highlight-1))] hover:brightness-110"
+                          : "bg-[hsl(var(--icon-highlight-2))] hover:bg-[hsl(var(--icon-highlight-2))] hover:brightness-110",
+                        "text-background font-medium"
+                      )}
+                    >
+                      <Link href="/contact" className="px-6">Apply Now</Link>
                     </Button>
                   </div>
                 </CardHeader>
                 <CardContent>
                   <div className="space-y-6">
                     <div>
-                      <h4 className="font-semibold mb-2">Requirements:</h4>
-                      <ul className="list-disc pl-5 space-y-1 text-muted-foreground">
+                      <h4 className="font-semibold mb-2 transition-colors duration-300 group-hover:text-[hsl(var(--foreground))]">
+                        Requirements:
+                      </h4>
+                      <ul className="list-disc pl-5 space-y-2">
                         {position.requirements.map((req) => (
-                          <li key={req}>{req}</li>
+                          <li key={req} className="text-muted-foreground transition-colors duration-300 hover:text-foreground">
+                            {req}
+                          </li>
                         ))}
                       </ul>
                     </div>
                     <div>
-                      <h4 className="font-semibold mb-2">Responsibilities:</h4>
-                      <ul className="list-disc pl-5 space-y-1 text-muted-foreground">
+                      <h4 className="font-semibold mb-2 transition-colors duration-300 group-hover:text-[hsl(var(--foreground))]">
+                        Responsibilities:
+                      </h4>
+                      <ul className="list-disc pl-5 space-y-2">
                         {position.responsibilities.map((resp) => (
-                          <li key={resp}>{resp}</li>
+                          <li key={resp} className="text-muted-foreground transition-colors duration-300 hover:text-foreground">
+                            {resp}
+                          </li>
                         ))}
                       </ul>
                     </div>
@@ -251,15 +312,29 @@ export default function CareersPage() {
             { step: '03', title: 'Interview', description: 'Technical and cultural fit interviews' },
             { step: '04', title: 'Offer', description: 'Receive and accept your offer to join us' }
           ].map((step, index) => (
-            <Card key={step.step} className="relative">
+            <Card key={step.step} className={cn(
+              "relative group overflow-hidden",
+              "transition-all duration-300 ease-in-out",
+              "hover:shadow-lg",
+              "before:absolute before:inset-0 before:opacity-0 before:transition-opacity",
+              "before:duration-300 hover:before:opacity-5",
+              `before:bg-[hsl(var(--icon-highlight-${(index % 4) + 1}))] hover:shadow-[hsl(var(--icon-highlight-${(index % 4) + 1}))]`
+            )}>
               <CardHeader>
-                <span className="text-4xl font-bold text-primary/20 absolute top-4 right-4">
+                <span className={cn(
+                  "text-5xl font-bold absolute top-4 right-4 transition-colors duration-300",
+                  `text-[hsl(var(--icon-highlight-${(index % 4) + 1}))] text-opacity-20 group-hover:text-opacity-30`
+                )}>
                   {step.step}
                 </span>
-                <CardTitle className="text-xl">{step.title}</CardTitle>
+                <CardTitle className="text-xl transition-colors duration-300 group-hover:text-[hsl(var(--foreground))]">
+                  {step.title}
+                </CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-muted-foreground">{step.description}</p>
+                <p className="text-muted-foreground transition-colors duration-300 group-hover:text-foreground/80">
+                  {step.description}
+                </p>
               </CardContent>
             </Card>
           ))}
@@ -267,13 +342,29 @@ export default function CareersPage() {
       </div>
 
       {/* CTA Section */}
-      <div className="bg-muted rounded-lg p-8 text-center">
-        <h2 className="text-2xl font-bold mb-4">Ready to Join Us?</h2>
-        <p className="text-muted-foreground mb-6">
+      <div className={cn(
+        "rounded-lg p-8 text-center relative overflow-hidden group",
+        "transition-all duration-300 ease-in-out",
+        "bg-[hsl(var(--icon-highlight-1))] bg-opacity-5 hover:bg-opacity-10"
+      )}>
+        <h2 className="text-2xl font-bold mb-4 transition-colors duration-300 group-hover:text-[hsl(var(--foreground))]">
+          Ready to Join Us?
+        </h2>
+        <p className="text-muted-foreground mb-6 transition-colors duration-300 group-hover:text-foreground/80">
           Take the first step towards an exciting career at Harezm.
         </p>
-        <Button asChild size="lg">
-          <Link href="/contact">Apply Now</Link>
+        <Button 
+          asChild 
+          size="lg"
+          className={cn(
+            "transition-all duration-300",
+            "transform hover:scale-[1.02]",
+            "shadow-sm hover:shadow-md",
+            "bg-[hsl(var(--icon-highlight-1))] hover:bg-[hsl(var(--icon-highlight-1))] hover:brightness-110",
+            "text-background font-medium"
+          )}
+        >
+          <Link href="/contact" className="px-8">Apply Now</Link>
         </Button>
       </div>
     </div>

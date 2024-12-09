@@ -4,6 +4,7 @@ import * as React from "react"
 import { usePathname, useRouter } from "next/navigation"
 import { Button } from "@/components/ui/button"
 import { cn } from "@/lib/utils"
+import { HighlightedIcon } from "@/components/ui/highlighted-icon"
 
 export function LanguageToggle() {
   const router = useRouter()
@@ -23,26 +24,30 @@ export function LanguageToggle() {
         size="sm"
         onClick={() => currentLocale !== "en" && toggleLanguage()}
         className={cn(
-          "h-6 rounded-full px-2 text-xs font-medium",
+          "h-6 rounded-full px-2 text-xs font-medium transition-colors",
           currentLocale === "en"
-            ? "bg-foreground text-background"
-            : "text-foreground hover:bg-muted"
+            ? "bg-foreground text-background hover:bg-foreground/90"
+            : "text-foreground hover:text-[hsl(var(--icon-highlight-1))]"
         )}
       >
-        EN
+        <HighlightedIcon variant="1" className={currentLocale === "en" ? "" : "px-0.5"}>
+          EN
+        </HighlightedIcon>
       </Button>
       <Button
         variant="ghost"
         size="sm"
         onClick={() => currentLocale !== "tr" && toggleLanguage()}
         className={cn(
-          "h-6 rounded-full px-2 text-xs font-medium",
+          "h-6 rounded-full px-2 text-xs font-medium transition-colors",
           currentLocale === "tr"
-            ? "bg-foreground text-background"
-            : "text-foreground hover:bg-muted"
+            ? "bg-foreground text-background hover:bg-foreground/90"
+            : "text-foreground hover:text-[hsl(var(--icon-highlight-2))]"
         )}
       >
-        TR
+        <HighlightedIcon variant="2" className={currentLocale === "tr" ? "" : "px-0.5"}>
+          TR
+        </HighlightedIcon>
       </Button>
     </div>
   )

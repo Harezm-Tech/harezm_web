@@ -7,6 +7,7 @@ import { Menu, X, Search, Globe, ChevronDown } from "lucide-react"
 import { useState, useEffect } from "react"
 import { useTheme } from "next-themes"
 import { cn } from "@/lib/utils"
+import { HighlightedIcon } from "@/components/ui/highlighted-icon"
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false)
@@ -169,12 +170,46 @@ const Navigation = () => {
             </div>
 
             {/* Search Button */}
-            <button
-              onClick={() => setSearchOpen(true)}
-              className="text-gray-300 hover:text-white p-1"
-            >
-              <Search className="w-5 h-5" />
-            </button>
+            <div className="flex items-center gap-2">
+              <Button
+                variant="ghost"
+                size="icon"
+                onClick={() => setSearchOpen(!searchOpen)}
+                className="relative"
+                aria-label="Search"
+              >
+                <HighlightedIcon variant="1" glowEffect>
+                  <Search className="h-5 w-5" />
+                </HighlightedIcon>
+              </Button>
+
+              <Button
+                variant="ghost"
+                size="icon"
+                className="relative"
+                aria-label="Language"
+              >
+                <HighlightedIcon variant="2" glowEffect>
+                  <Globe className="h-5 w-5" />
+                </HighlightedIcon>
+              </Button>
+
+              <Button
+                variant="ghost"
+                size="icon"
+                onClick={toggleMenu}
+                className="md:hidden"
+                aria-label="Menu"
+              >
+                <HighlightedIcon variant="3" glowEffect>
+                  {isOpen ? (
+                    <X className="h-5 w-5" />
+                  ) : (
+                    <Menu className="h-5 w-5" />
+                  )}
+                </HighlightedIcon>
+              </Button>
+            </div>
           </div>
 
           {/* Mobile menu button */}

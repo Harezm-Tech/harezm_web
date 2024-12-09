@@ -5,6 +5,7 @@ import { ThemeProvider } from "@/components/theme-provider"
 import { ThemeContainer } from '@/components/theme-container'
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
+import { WhatsAppButton } from "@/components/whatsapp-button"
 import { notFound } from 'next/navigation'
 import { isValidLocale } from '@/src/i18n/config'
 import { Inter } from 'next/font/google'
@@ -68,6 +69,7 @@ export default async function LocaleLayout({
               <Header />
               <main className="flex-1">{children}</main>
               <Footer />
+              <WhatsAppButton />
             </ThemeContainer>
           </ThemeProvider>
         </NextIntlClientProvider>

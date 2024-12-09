@@ -5,6 +5,7 @@ import { Moon, Sun } from "lucide-react"
 import { useTheme } from "next-themes"
 import { Button } from "@/components/ui/button"
 import { motion, AnimatePresence } from "framer-motion"
+import { HighlightedIcon } from "@/components/ui/highlighted-icon"
 
 export function ThemeToggle() {
   const { setTheme, theme, systemTheme } = useTheme()
@@ -48,7 +49,9 @@ export function ThemeToggle() {
             transition={{ duration: 0.2 }}
             className="absolute"
           >
-            <Sun className="h-5 w-5" />
+            <HighlightedIcon variant="2" glowEffect>
+              <Sun className="h-5 w-5" />
+            </HighlightedIcon>
           </motion.div>
         ) : (
           <motion.div
@@ -59,7 +62,9 @@ export function ThemeToggle() {
             transition={{ duration: 0.2 }}
             className="absolute"
           >
-            <Moon className="h-5 w-5" />
+            <HighlightedIcon variant="4" glowEffect>
+              <Moon className="h-5 w-5" />
+            </HighlightedIcon>
           </motion.div>
         )}
       </AnimatePresence>

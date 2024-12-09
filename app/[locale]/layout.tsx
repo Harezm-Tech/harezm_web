@@ -11,7 +11,10 @@ import { Inter } from 'next/font/google'
 import { getMessages, unstable_setRequestLocale } from 'next-intl/server'
 import { locales } from '@/config'
 
-const inter = Inter({ subsets: ['latin'] })
+const inter = Inter({ 
+  subsets: ['latin'],
+  variable: '--font-inter',
+})
 
 export const metadata: Metadata = {
   title: "Harezm Technology",
@@ -56,9 +59,9 @@ export default async function LocaleLayout({
   const messages = await import(`../../messages/${locale}.json`).then(module => module.default)
 
   return (
-    <html lang={locale} suppressHydrationWarning>
+    <html lang={locale} suppressHydrationWarning className={inter.variable}>
       <head />
-      <body className={inter.className} suppressHydrationWarning>
+      <body suppressHydrationWarning>
         <NextIntlClientProvider messages={messages} locale={locale}>
           <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
             <ThemeContainer>

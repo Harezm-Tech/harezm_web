@@ -34,6 +34,7 @@
  
     --radius: 0.5rem;
     --theme-transition-color: 0, 0, 0;  /* Black for light to dark */
+    --font-inter: 'Inter', sans-serif;
   }
  
   .dark {
@@ -73,7 +74,8 @@
     @apply border-border;
   }
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-sans;
+    font-family: var(--font-inter);
   }
   .font-outline {
     @apply font-sans uppercase tracking-wider font-semibold;

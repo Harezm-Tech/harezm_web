@@ -45,10 +45,8 @@ export async function generateStaticParams() {
 
 export default async function LocaleLayout({
   children,
-  params
+  params: { locale }
 }: Props) {
-  const locale = params.locale
-  
   // Validate that the incoming `locale` parameter is valid
   if (!isValidLocale(locale)) notFound()
 

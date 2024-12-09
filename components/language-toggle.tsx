@@ -8,11 +8,11 @@ import { cn } from "@/lib/utils"
 export function LanguageToggle() {
   const router = useRouter()
   const pathname = usePathname()
-  const currentLocale = pathname.startsWith("/tr") ? "tr" : "en"
+  const currentLocale = pathname?.startsWith("/tr") ? "tr" : "en"
 
   const toggleLanguage = () => {
     const newLocale = currentLocale === "en" ? "tr" : "en"
-    const newPathname = pathname.replace(/^\/(en|tr)/, `/${newLocale}`)
+    const newPathname = pathname?.replace(/^\/(en|tr)/, `/${newLocale}`) ?? `/${newLocale}`
     router.push(newPathname)
   }
 

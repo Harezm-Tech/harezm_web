@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button"
 import { Menu, X, Search, Globe, ChevronDown } from "lucide-react"
 import { useState, useEffect } from "react"
 import { useTheme } from "next-themes"
-import cn from 'classnames';
+import { cn } from "@/lib/utils"
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false)
@@ -64,7 +64,7 @@ const Navigation = () => {
   ]
 
   return (
-    <nav className={`fixed w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-zinc-900/90 backdrop-blur-md' : 'bg-transparent'}`}>
+    <nav className={cn(`fixed w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-zinc-900/90 backdrop-blur-md' : 'bg-transparent'}`)}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}

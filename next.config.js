@@ -4,6 +4,7 @@ const withNextIntl = createNextIntlPlugin('./i18n.ts');
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  output: 'standalone',
   images: {
     remotePatterns: [
       {
@@ -18,9 +19,7 @@ const nextConfig = {
     _next_intl_trailing_slash: '1'
   },
   experimental: {
-    serverActions: {
-      allowedOrigins: ['localhost:3000', 'harezm.com']
-    }
+    serverActions: true
   }
 };
 

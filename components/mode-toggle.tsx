@@ -18,8 +18,8 @@ export function ModeToggle() {
   return (
     <Button
       variant="outline"
-      size="icon"
-      className="h-10 w-10 rounded-full"
+      size="sm"
+      className="h-10 w-10 p-0 rounded-full"
       onClick={toggleTheme}
     >
       <Sun className="h-[1.5rem] w-[1.5rem] rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0 text-black dark:text-white" />

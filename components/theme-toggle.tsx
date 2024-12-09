@@ -22,7 +22,7 @@ export function ThemeToggle() {
 
   if (!mounted) {
     return (
-      <Button variant="ghost" size="icon" className="relative">
+      <Button variant="ghost" size="sm" className="relative w-9 h-9">
         <span className="h-5 w-5" />
         <span className="sr-only">Loading theme</span>
       </Button>
@@ -34,9 +34,9 @@ export function ThemeToggle() {
   return (
     <Button
       variant="ghost"
-      size="icon"
+      size="sm"
       onClick={toggleTheme}
-      className="relative"
+      className="relative w-9 h-9"
     >
       <AnimatePresence mode="wait" initial={false}>
         {currentTheme === "light" ? (

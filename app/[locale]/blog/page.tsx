@@ -104,7 +104,7 @@ export default function BlogPage() {
             </CardContent>
             <CardFooter>
               <Button asChild variant="outline">
-                <Link href={{ pathname: `/blog/${post.title.toLowerCase().replace(/\s+/g, '-')}`, params: { locale } }}>
+                <Link href={`/${locale}/blog/${post.title.toLowerCase().replace(/\s+/g, '-')}`}>
                   Read More
                 </Link>
               </Button>

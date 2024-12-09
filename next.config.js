@@ -18,7 +18,9 @@ const nextConfig = {
     _next_intl_trailing_slash: '1'
   },
   experimental: {
-    serverActions: true
+    serverActions: {
+      allowedOrigins: ['localhost:3000', 'harezm.com']
+    }
   }
 };
 

@@ -14,6 +14,9 @@ const nextConfig = {
         pathname: '/**',
       },
     ],
+  },
+  env: {
+    _next_intl_trailing_slash: String('1')
   }
 };
 

@@ -14,12 +14,6 @@ const nextConfig = {
         pathname: '/**',
       },
     ],
-  },
-  env: {
-    _next_intl_trailing_slash: '1'
-  },
-  experimental: {
-    serverActions: true
   }
 };
 

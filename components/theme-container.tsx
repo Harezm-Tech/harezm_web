@@ -8,12 +8,19 @@ interface ThemeContainerProps {
 }
 
 export function ThemeContainer({ children }: ThemeContainerProps) {
+  const [mounted, setMounted] = useState(false)
   const [transitioning, setTransitioning] = useState(false)
   const [mousePosition, setMousePosition] = useState({ x: "50%", y: "50%" })
-  const { theme } = useTheme()
+  const { theme, resolvedTheme } = useTheme()
+
+  useEffect(() => {
+    setMounted(true)
+  }, [])
 
   // Handle theme transition effect
   useEffect(() => {
+    if (!mounted) return;
+
     const handleThemeChange = () => {
       setTransitioning(true)
       setTimeout(() => setTransitioning(false), 500)
@@ -22,10 +29,12 @@ export function ThemeContainer({ children }: ThemeContainerProps) {
     // Listen for theme changes
     window.addEventListener("themeChange", handleThemeChange)
     return () => window.removeEventListener("themeChange", handleThemeChange)
-  }, [])
+  }, [mounted])
 
   // Track mouse position for radial effect
   useEffect(() => {
+    if (!mounted) return;
+
     const handleMouseMove = (e: MouseEvent) => {
       setMousePosition({
         x: `${(e.clientX / window.innerWidth) * 100}%`,
@@ -35,7 +44,11 @@ export function ThemeContainer({ children }: ThemeContainerProps) {
 
     window.addEventListener("mousemove", handleMouseMove)
     return () => window.removeEventListener("mousemove", handleMouseMove)
-  }, [])
+  }, [mounted])
+
+  if (!mounted) {
+    return <div className="contents">{children}</div>
+  }
 
   return (
     <div

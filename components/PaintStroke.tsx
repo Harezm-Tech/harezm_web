@@ -16,11 +16,11 @@ interface PaintStrokeProps {
 }
 
 const variantColors = {
-  yellow: '#FFD700',
-  purple: '#9D4EDD',
+  yellow: 'hsl(47, 67%, 82%)',  // secondary
+  purple: 'hsl(276, 67%, 83%)',  // accent
   dark: '#1A1A1A',
   light: '#FFFFFF',
-  cyan: '#2DFFF5'
+  cyan: 'hsl(169, 52%, 77%)'  // primary
 };
 
 const PaintStroke: React.FC<PaintStrokeProps> = ({

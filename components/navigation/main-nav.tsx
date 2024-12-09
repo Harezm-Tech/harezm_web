@@ -211,7 +211,7 @@ export function MainNav() {
             <div className="flex items-center space-x-4">
               {/* Language Selector */}
               <div className="relative group">
-                <Button variant="ghost" size="icon">
+                <Button variant="ghost" size="sm">
                   <Globe className="h-4 w-4" />
                 </Button>
                 <div className="absolute right-0 top-full w-40 py-2 bg-background border rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">

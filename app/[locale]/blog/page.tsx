@@ -62,7 +62,7 @@ const blogPosts = [
 
 export default function BlogPage() {
   const params = useParams();
-  const locale = params.locale as string;
+  const locale = (params?.locale ?? 'en') as string;
 
   return (
     <div className="container py-10">
